@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Discovery OS — Marta O'Toole</title>
+  <meta name="description" content="Discovery OS is AI-powered discovery for enterprise transformation teams — turning workshop transcripts into structured As-Is processes, visual process maps, pain points, gaps and evidence-grounded requirements, kept traceable to the source for human review." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <span class="monogram" aria-hidden="true">MO</span>
+        <span class="brand__name">Marta O'Toole</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="../index.html#builds">AI Builds</a>
+        <a href="../index.html#transformation">Transformation</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+        <!-- TODO: add LinkedIn profile URL -->
+        <a class="btn btn--primary btn--sm" href="https://www.linkedin.com/in/marta-o-918156165/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.68-2.91V8.48Z"/></svg>
+          LinkedIn
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="container">
+        <p class="eyebrow">Case study</p>
+        <h1>Discovery OS</h1>
+        <p class="lead">AI-powered discovery for enterprise transformation teams</p>
+        <p>Discovery OS helps transformation teams move faster from workshop to action. It turns discovery transcripts into structured As-Is processes and visual process maps, surfaces pain points and unresolved gaps, and generates evidence-grounded requirements — reducing the manual analysis required after workshops while preserving source evidence for human review.</p>
+        <p><a class="back-link link-arrow" href="../index.html#builds">Back to all work</a></p>
+      </div>
+    </section>
+
+    <!-- Hero product visual -->
+    <section class="section case-visual">
+      <div class="container">
+        <figure class="product-hero">
+          <div class="frame">
+            <img src="../assets/img/process-map.png" alt="Discovery OS Process Map showing extracted process paths, ordered steps, Trigger and End nodes." />
+          </div>
+          <figcaption>The Process Map view in Discovery OS — a read-only overview built only from the extracted process paths and steps.</figcaption>
+        </figure>
+
+        <figure class="product-support">
+          <div class="frame">
+            <img src="../assets/img/discovery-os-as-is-step-detail.png" alt="Discovery OS As-Is Process step detail showing Path ID, Actor, Action, System or Channel, Condition and supporting evidence." />
+          </div>
+          <figcaption>Structured As-Is review. Each extracted process step captures the actor, action, system/channel and conditions, with supporting evidence preserved for human review and editing.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>Problem</h2>
+          <p>Enterprise transformation discovery generates hours of valuable but unstructured conversation. After each workshop, teams still spend significant time manually turning that discussion into usable outputs: reconstructing the current-state process and its variants, identifying pain points, tracking what remains unresolved, and translating findings into requirements.</p>
+          <p>That work is repetitive and time-consuming, but simply automating it with an LLM creates another problem: transformation decisions cannot safely rely on outputs that invent missing detail, lose their source, or hide uncertainty.</p>
+          <p>The product question was: how can AI accelerate the journey from workshop to usable transformation outputs while keeping the work grounded, traceable and under human control?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>Product</h2>
+          <p>Discovery OS takes a workshop transcript and produces four structured transformation outputs:</p>
+          <ul>
+            <li><strong>As-Is</strong> — the current-state trigger, process paths, ordered steps and a read-only visual process map</li>
+            <li><strong>Pain Points</strong> — operational friction surfaced during discovery</li>
+            <li><strong>Gaps</strong> — information or decisions the workshop leaves unresolved</li>
+            <li><strong>Requirements</strong> — evidence-grounded requirements derived from the discovery</li>
+          </ul>
+          <p>Each generated item retains the transcript evidence it came from. The analyst reviews and corrects the interpretation — reclassifying, rewording, adding or removing items — without rewriting the underlying source quotes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>How it works</h2>
+          <p>Transcript &rarr; structured LLM extraction &rarr; deterministic citation and provenance enrichment &rarr; an evidence-grounded output bundle &rarr; an editable Streamlit review interface.</p>
+          <p>Every output is a defined structure — typed fields, stable IDs, schema-checked JSON — not free text. Requirements are generated from the extracted Pain Points, preserving traceability from evidence through identified problem to requirement. Provenance enrichment is deterministic text matching, not a second model: it locates each evidence quote in the transcript and records its speaker and timestamp.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>Grounding &amp; human review</h2>
+          <p>Human review is a design principle here, not a disclaimer added afterwards.</p>
+          <ul>
+            <li><strong>Unknown stays unknown.</strong> Extraction is instructed not to infer systems, channels or process detail the workshop did not establish; a hedge in the transcript is kept as uncertainty, not promoted to fact.</li>
+            <li><strong>Evidence is read-only.</strong> Source quotes cannot be edited in the interface. Analytical fields — classification, wording, structure — can.</li>
+            <li><strong>Provenance is preserved.</strong> Each quote is matched to its transcript turn and validated as verbatim text. When the match fails, the interface shows <code>SOURCE NOT LOCATED</code> rather than guessing an attribution.</li>
+            <li><strong>Drafts are labelled as drafts.</strong> Every output is marked &ldquo;AI-generated draft — review required&rdquo; throughout the interface.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>Evaluation approach</h2>
+          <p>Development was gold-first: hand-built Gold datasets fixed the correct answer before any prompt was judged against it, backed by a deterministic regression suite.</p>
+          <p>Prompt versions were tested one at a time, one variable per change, and reviewed on precision, recall and negative controls — transcripts that should produce nothing. A version was adopted only if it beat the current one on that evidence; being newer was not a reason to accept it.</p>
+          <p>The Gap extractor is the clearest example. Its best version reached <strong>100% precision and 80% recall</strong> with the negative control passing. A later version regressed to <strong>40% recall</strong>, produced a duplicate and a false positive, and failed the negative control — so it was rejected, and Gap extraction was held at the earlier level and documented as a known limitation, mitigated by letting analysts add and edit gaps directly.</p>
+          <p>At the v0.1 freeze the repository holds <strong>183 deterministic assertions across 5 test files, all passing</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product screenshots -->
+    <section class="section section-alt">
+      <div class="container">
+        <p class="eyebrow">Product screenshots</p>
+        <!-- The Process Map is shown as the hero visual near the top of this page. These slots cover the supporting views. -->
+
+        <div class="shots shots--grid">
+          <figure class="shot">
+            <div class="frame">
+              <img src="../assets/img/discovery-os-as-is.png" alt="Discovery OS As-Is editor — a process trigger with actor and action fields, and a numbered supporting quote with its source status" />
+            </div>
+            <figcaption><strong>As-Is.</strong> Structured current-state process — trigger, paths and ordered steps.</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <div class="frame">
+              <img src="../assets/img/discovery-os-pain-point.png" alt="Discovery OS Pain Points tab — an editable list of extracted pain points PP-1 to PP-5" />
+            </div>
+            <figcaption><strong>Pain Points.</strong> Explicit operational friction, each with its transcript evidence.</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <div class="frame">
+              <img src="../assets/img/discovery-os-gap.png" alt="Discovery OS Gaps tab — an editable list of unresolved questions G1 to G5 the transcript did not answer" />
+            </div>
+            <figcaption><strong>Gaps.</strong> Unresolved information kept as uncertainty rather than inferred.</figcaption>
+          </figure>
+
+          <figure class="shot">
+            <div class="frame">
+              <img src="../assets/img/discovery-os-requirement.png" alt="Discovery OS Requirements tab — a list of requirements, each derived from the extracted pain points" />
+            </div>
+            <figcaption><strong>Requirements.</strong> Evidence-grounded requirements linked back to their source pain points and supporting evidence.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>What I built</h2>
+          <ul>
+            <li><strong>Product concept and output model</strong> — an evidence-grounded discovery assistant; four structured artefacts with stable IDs and schema-checked JSON.</li>
+            <li><strong>Extraction design</strong> — the prompts and structured-output contracts for each extractor, including deriving Requirements from the extracted Pain Points while preserving traceability.</li>
+            <li><strong>Gold datasets and evaluation</strong> — hand-built Gold and negative controls for As-Is steps, Pain Points, Gaps and Requirements, and the regression suite that gates every prompt change.</li>
+            <li><strong>Provenance enrichment</strong> — deterministic matching of each evidence quote to its transcript turn, with located / ambiguous / not-located states.</li>
+            <li><strong>Streamlit review interface</strong> — run extraction, tabbed review of all four outputs, add / edit / delete with IDs preserved, broken-reference warnings, JSON export; analytical fields editable, source evidence immutable.</li>
+            <li><strong>Process-map UX</strong> — a read-only, dependency-free visual of each path from trigger to end.</li>
+            <li><strong>Testing</strong> — end-to-end pipeline tests plus the 183-assertion deterministic regression suite, and a paid end-to-end run on a real transcript at the freeze.</li>
+          </ul>
+          <p class="tech-line"><strong>Tech:</strong> Python &middot; OpenAI API &middot; Streamlit &middot; schema-based JSON outputs</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>Current status</h2>
+          <p><strong>Discovery OS v0.1 — Basic Working Version.</strong></p>
+          <p>Discovery OS v0.1 is a working end-to-end product. It runs on real workshop transcripts, produces all four structured outputs, preserves citation and provenance, supports human review and editing, and includes read-only process visualisation.</p>
+          <p>At the v0.1 freeze, 183/183 deterministic assertions passed, alongside a successful real-transcript end-to-end smoke test.</p>
+          <p>Current stage: working v0.1, ready for further product iteration and validation with transformation users.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span data-year>2026</span> Marta O'Toole</span>
+      <span><a href="../index.html#contact">Contact</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

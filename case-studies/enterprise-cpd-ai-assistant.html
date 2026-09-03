@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enterprise CPD AI Assistant — Marta O'Toole</title>
+  <meta name="description" content="An enterprise RAG knowledge assistant that helps regulated professionals navigate complex CPD requirements through natural-language questions — combining retrieval and an LLM with deterministic handling for recurring questions." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <span class="monogram" aria-hidden="true">MO</span>
+        <span class="brand__name">Marta O'Toole</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="nav" id="nav" aria-label="Primary">
+        <a href="../index.html#builds">AI Builds</a>
+        <a href="../index.html#transformation">Transformation</a>
+        <a href="../index.html#about">About</a>
+        <a href="../index.html#contact">Contact</a>
+        <a class="btn btn--primary btn--sm" href="https://www.linkedin.com/in/marta-o-918156165/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 5a2 2 0 1 1-4-.002 2 2 0 0 1 4 .002ZM7 8.48H3V21h4V8.48Zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.68-2.91V8.48Z"/></svg>
+          LinkedIn
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="container">
+        <p class="eyebrow">Case study</p>
+        <h1>Enterprise CPD AI Assistant</h1>
+        <p class="lead">RAG knowledge assistant for enterprise CPD guidance</p>
+        <div class="project__meta"><span class="status">Productionisation in progress</span></div>
+        <p>I designed and built an enterprise AI assistant that helps regulated professionals navigate complex CPD requirements through natural-language questions — making fragmented policy and Learning &amp; Development guidance easier to understand and act on.</p>
+        <p><a class="back-link link-arrow" href="../index.html#builds">Back to all work</a></p>
+      </div>
+    </section>
+
+    <!-- Representative product visual (synthetic) -->
+    <section class="section case-visual">
+      <div class="container">
+        <figure class="product-hero">
+          <div class="frame">
+            <img src="../assets/img/cpd-ai-assistant-synthetic.png" alt="Representative synthetic interface for the Enterprise CPD AI Assistant, showing an employee asking CPD questions and receiving conversational guidance." />
+          </div>
+          <figcaption>Representative interface. Synthetic visual created for this case study; no confidential EY data, documentation or internal product screens are shown.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>Problem</h2>
+          <p>The challenge was not a lack of CPD guidance — it was the volume and complexity of it.</p>
+          <p>Employees had access to lengthy policies, guidance and Learning &amp; Development documentation covering what constituted CPD, what qualified as technical learning, what evidence needed to be retained and how hours should be recorded. In practice, people still struggled with straightforward questions: does an online course count? Can I count a webinar or lecture? What makes an activity &ldquo;technical&rdquo;? What evidence do I need? How should I describe the activity when recording it?</p>
+          <p>The result was avoidable friction. Employees sometimes did not record eligible CPD activity at all, or submitted records that were rejected because the information or evidence was insufficient. For professionals subject to CPD requirements, difficulty interpreting the guidance could ultimately contribute to non-compliance.</p>
+          <p>The product question: can an AI assistant turn complex, fragmented CPD guidance into clear, actionable answers without requiring employees to search and interpret lengthy source documents themselves?</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>Product</h2>
+          <p>I built a conversational AI assistant that lets employees ask CPD questions in natural language and get answers grounded in the organisation's existing CPD knowledge.</p>
+          <p>The knowledge base brought together relevant source material:</p>
+          <ul>
+            <li>CPD policies</li>
+            <li>guidance documents</li>
+            <li>Learning &amp; Development material</li>
+            <li>relevant FAQs and supporting documentation</li>
+          </ul>
+          <p>Rather than expecting employees to find the right document, locate the relevant section and interpret it themselves, the assistant provided a conversational route into that knowledge. Typical questions:</p>
+          <ul>
+            <li>Does this activity count towards CPD?</li>
+            <li>What qualifies as technical CPD?</li>
+            <li>Can an online course or webinar count?</li>
+            <li>What evidence should I retain?</li>
+            <li>How should I record the activity?</li>
+            <li>Why might a CPD submission be rejected?</li>
+          </ul>
+          <p>The interface was a modern chat experience designed around employees asking practical questions rather than navigating policy documentation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>How it works</h2>
+          <p>Employee question &rarr; relevant enterprise CPD knowledge retrieved &rarr; LLM generates a contextual answer &rarr; deterministic handling applied for defined high-frequency question patterns where required &rarr; employee receives a clear answer to act on.</p>
+          <p>The solution used a RAG approach in Python, grounding responses in a curated knowledge base built from existing CPD policies, PDFs and Learning &amp; Development material.</p>
+          <p>A key design decision emerged through testing: generative responses were not consistently reliable for every question. For recurring, well-understood patterns where the response needed to be predictable, I added rule-based handling triggered by defined terms or keywords — a pragmatic hybrid that uses retrieval and an LLM where contextual interpretation adds value, and deterministic responses where consistency matters more.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>Building within enterprise constraints</h2>
+          <p>The assistant was built within real enterprise constraints — limited budget and technology options — for an enterprise use case with a broader potential internal audience of around 2,000 employees. That shaped the architecture: rather than assuming every question could be solved reliably through generative AI alone, the solution combined RAG-based answers with deterministic handling for known scenarios where testing showed greater control was needed.</p>
+          <p>The goal was not to maximise the amount of AI in the solution — it was to build the most useful and reliable solution possible within the available constraints.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>Evaluation &amp; iteration</h2>
+          <p>I created a test set of around 100 representative questions, based on the kinds of CPD queries employees were likely to ask.</p>
+          <p>The assistant was evaluated through:</p>
+          <ul>
+            <li>structured testing against the representative question set</li>
+            <li>manual review of generated answers</li>
+            <li>user testing with around 200 people across Consulting (EY Ireland and the UK)</li>
+            <li>Subject Matter Expert (SME) review</li>
+            <li>iterative refinement based on incorrect, unclear or unreliable responses</li>
+          </ul>
+          <p>Early testing exposed an important limitation: some generated answers were incorrect or inconsistent even when the underlying guidance existed. Rather than accept those responses, I identified recurring question patterns and introduced deterministic answers where the correct response was known and consistency mattered, then retested as the solution evolved.</p>
+          <p>Because CPD is a compliance-related domain, plausible-sounding answers were not enough — an answer needed to reflect the underlying guidance accurately enough to be useful. Evaluation combined technical testing with domain validation from SMEs and end users.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>Outcome</h2>
+          <p>Testing and early use showed that the assistant could make CPD guidance significantly easier to navigate, giving employees a faster route to understanding what counted, what evidence was required and how activity should be recorded. Feedback was positive, and the solution demonstrated potential to reduce time spent searching through guidance, improve confidence in CPD recording, and reduce avoidable submission errors.</p>
+          <p>The project also generated leadership interest and progressed beyond the initial build towards broader productionisation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>What I built</h2>
+          <ul>
+            <li><strong>End-to-end AI assistant</strong> — designed and built the solution from problem definition through working application.</li>
+            <li><strong>Knowledge base</strong> — brought together relevant CPD policies, PDFs and Learning &amp; Development guidance for retrieval.</li>
+            <li><strong>RAG workflow</strong> — implemented retrieval and LLM-based question answering in Python.</li>
+            <li><strong>Hybrid response design</strong> — introduced deterministic handling for recurring question patterns where generative responses were not reliable enough.</li>
+            <li><strong>Chat experience</strong> — built a conversational interface for employees to ask practical CPD questions in natural language.</li>
+            <li><strong>Evaluation</strong> — created and tested around 100 representative questions, with manual review, user testing and SME validation.</li>
+            <li><strong>Iteration</strong> — used observed failure modes and feedback to refine the solution rather than relying on plausible-looking model output.</li>
+          </ul>
+          <p class="tech-line"><strong>Tech:</strong> Python &middot; RAG &middot; LLMs</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cs-block prose">
+          <h2>Current status</h2>
+          <p>The assistant has progressed from working build through user and SME testing, with positive feedback and leadership interest. Work is now focused on productionising the solution for broader internal use.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>&copy; <span data-year>2026</span> Marta O'Toole</span>
+      <span><a href="../index.html#contact">Contact</a></span>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
